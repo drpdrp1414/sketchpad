@@ -1,0 +1,21 @@
+body
+{
+    background: rgb(110, 110, 110);
+}
+
+.container
+{
+    
+}
+
+.container .row
+{
+    display: inline-flex;
+    width: 100%;
+
+}
+
+.container .row .gridsquare
+{
+    justify-content: center;
+}
