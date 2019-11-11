@@ -9,11 +9,19 @@ function genDivs(size)
         {
             let cell = document.createElement("div")
             cell.className= "gridsquare"
-            cell.innerText = 1//(i * size) + x
+            cell.innerText = (i * size) + x
             row.appendChild(cell)
         }
         box.appendChild(row)
     }
+    var cells = document.querySelectorAll(".gridsquare")
+
+    
+     for(var z = 0; z < cells.length; z++)
+    {
+        cells[i].addEventListener("mouseenter", changeColor())
+    }
+    
     
 }
 
@@ -25,4 +33,10 @@ function removeDivs()
         containerNode.removeChild(childNodes);
         childNodes = containerNode.firstChild
     }
+}
+
+
+function changeColor()
+{
+    
 }

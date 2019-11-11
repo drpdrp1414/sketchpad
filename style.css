@@ -10,12 +10,20 @@ body
 
 .container .row
 {
-    display: inline-flex;
+    text-align: center;
     width: 100%;
 
 }
 
 .container .row .gridsquare
 {
-    justify-content: center;
+    border: 1px solid black;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+#permaHover
+{
+    background-color: black;
 }
