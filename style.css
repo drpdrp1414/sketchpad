@@ -23,7 +23,7 @@ body
     height: 30px;
 }
 
-#permaHover
+.permaHover
 {
     background-color: black;
 }

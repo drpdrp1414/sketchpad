@@ -14,15 +14,22 @@ function genDivs(size)
         }
         box.appendChild(row)
     }
-    var cells = document.querySelectorAll(".gridsquare")
+   changeColor()
+       
+}
 
-    
-     for(var z = 0; z < cells.length; z++)
+function changeColor()
+{ 
+    var cells = document.querySelectorAll(".gridsquare")
+    for(let i = 0; i < cells.length; i++)
     {
-        cells[i].addEventListener("mouseenter", changeColor())
+        cells.item(i).addEventListener("mouseenter", function()
+        {
+            cells.item(i).classList.add("permaHover")
+        })
     }
-    
-    
+
+    console.log(cells.length)
 }
 
 function removeDivs()
@@ -36,7 +43,3 @@ function removeDivs()
 }
 
 
-function changeColor()
-{
-    
-}
