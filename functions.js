@@ -9,7 +9,7 @@ function genDivs(size)
         {
             let cell = document.createElement("div")
             cell.className= "gridsquare"
-            cell.innerText = (i * size) + x
+            //cell.innerText = (i * size) + x
             row.appendChild(cell)
         }
         box.appendChild(row)
