@@ -34,13 +34,20 @@ function newGrid()
 
 function sizeControl(){
     var cells = document.querySelectorAll(".gridsquare")
-    var cell = document.querySelector(".gridsquare")
+    var rows = document.querySelectorAll(".row")
     var dimension = Math.sqrt(cells.length)
     var heightNew = 660/dimension + "px"
-    
-    /* cells.style.height = heightNew
-    cells.style.width = heightNew */
-}
+
+    for (var i = 0; i < cells.length; i++)
+    {
+        cells[i].style.height = heightNew
+        cells[i].style.width = heightNew
+    }
+    for (var i = 0; i < rows.length; i++)
+    {
+        rows[i].style.height = heightNew
+    }
+}    
 
 function changeColor()
 { 
