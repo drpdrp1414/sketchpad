@@ -28,3 +28,20 @@ body
 {
     background-color: black;
 }
+
+.buttonContainer{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+button
+{
+    
+    background: white;
+    padding: 15px;
+    font-size: 16px;
+    margin: 5px;
+    
+}

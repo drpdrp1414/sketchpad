@@ -26,6 +26,9 @@ function newGrid()
     {
         alert("Please enter a real number!");
     }
+    if(size == null)
+    {
+    }
     else
     {
         genDivs(size)
@@ -67,4 +70,11 @@ function resetDivs()
     var cells = document.querySelectorAll(".gridsquare")
     let dimension = Math.sqrt(cells.length)
     genDivs(dimension)
+}
+
+function randColor() {
+    for (var i=0, col=''; i<6; i++) {
+        col += (Math.random()*16|0).toString(16);
+    }
+    return '#'+col;
 }
