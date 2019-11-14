@@ -1,5 +1,12 @@
+window.addEventListener("load", myInit, true); function myInit(){
+    genDivs(16)
+    colorSwap()
+}
+
 function genDivs(size)
 {
+    var blackButton = document.getElementById("black")
+    var colorButton = document.getElementById("color")
     var box = document.querySelector(".container")
     box.innerHTML="";
     for(var i = 0; i < size; i++)
@@ -16,7 +23,7 @@ function genDivs(size)
         box.appendChild(row)
     }
     sizeControl()
-    changeColor()   
+    initColor(blackButton, colorButton)   
 }
 
 function newGrid()
@@ -52,14 +59,22 @@ function sizeControl(){
     }
 }    
 
-function changeColor()
+function initColor(black, color)
 { 
     var cells = document.querySelectorAll(".gridsquare")
     for(let i = 0; i < cells.length; i++)
     {
         cells.item(i).addEventListener("mouseenter", function()
         {
-            cells.item(i).classList.add("permaHover")
+            if(black.classList.contains("active"))
+            {
+                cells.item(i).style.backgroundColor = "black"
+            }
+            else
+            {
+                color = randColor()
+                cells.item(i).style.backgroundColor = color
+            }
         })
     }
     //console.log(cells.length)
@@ -77,4 +92,19 @@ function randColor() {
         col += (Math.random()*16|0).toString(16);
     }
     return '#'+col;
+}
+
+function colorSwap(){
+    var blackButton = document.getElementById("black")
+    var colorButton = document.getElementById("color")
+
+    blackButton.addEventListener("click", function(){
+        blackButton.classList.add("active")
+        colorButton.classList.remove("active")
+    })
+
+    colorButton.addEventListener("click", function(){
+        colorButton.classList.add("active")
+        blackButton.classList.remove("active")
+    })
 }

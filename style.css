@@ -18,10 +18,11 @@ body
 
 .container .row .gridsquare
 {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: inline-block;
     width: 30px;
     height: 30px;
+    background: white;
 }
 
 .permaHover
@@ -44,4 +45,9 @@ button
     font-size: 16px;
     margin: 5px;
     
+}
+
+.active{
+
+    border-color: lawngreen;
 }
